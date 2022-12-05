@@ -1,0 +1,23 @@
+total 80
+drwxr-xr-x 2 root root 4096 Dec  5 09:08 .
+drwxr-xr-x 6 root root  139 Dec  1 07:52 ..
+-rwxr-xr-x 1 root root   32 Dec  5 07:53 0-hello_world
+-rwxr-xr-x 1 root root   29 Dec  5 08:16 1-confused_smiley
+-rwxr-xr-x 1 root root   28 Dec  5 08:12 2-hellofile
+-rwxr-xr-x 1 root root   39 Dec  5 08:12 3-twofiles
+-rwxr-xr-x 1 root root   29 Dec  5 08:17 4-lastlines
+-rwxr-xr-x 1 root root   29 Dec  5 08:21 5-firstlines
+-rwxr-xr-x 1 root root   40 Dec  5 08:27 6-third_line
+-rwxr-xr-x 1 root root   84 Dec  5 08:58 7-file
+-rwxr-xr-x 1 root root   36 Dec  5 09:08 8-cwd_state
+-rwxr-xr-x 1 root root   12 Nov 29 21:05 ba
+-rwxr-xr-x 1 root root   39 Dec  5 08:59 \\*\\\"Best
+-rwxr-xr-x 1 root root   13 Dec  5 08:48 \*\\'"Best School"\'\*$\?\*\*\*\*\*:)
+-rwxr-xr-x 1 root root   18 Nov 29 21:05 c
+-rwxr-xr-x 1 root root   23 Dec  5 08:04 ex
+-rwxr-xr-x 1 root root   81 Dec  5 08:28 g
+-rwxr-xr-x 1 root root   55 Dec  5 08:27 gf
+-rwxr-xr-x 1 root root  530 Dec  5 08:18 junk
+-rw-r--r-- 1 root root    0 Dec  5 09:08 ls_cwd_content
+-rwxr-xr-x 1 root root   47 Dec  5 07:46 README.md
+-rwxr-xr-x 1 root root    4 Dec  5 08:57 yared
