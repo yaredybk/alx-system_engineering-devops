@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m 'test'
+git commit -m 'alx shell i/o shell_redirections'
 git push
