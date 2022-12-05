@@ -1,0 +1,12 @@
+total 40
+-rwxr-xr-x 1 root root 32 Dec  5 07:53 0-hello_world
+-rwxr-xr-x 1 root root 29 Dec  5 08:16 1-confused_smiley
+-rwxr-xr-x 1 root root 28 Dec  5 08:12 2-hellofile
+-rwxr-xr-x 1 root root 39 Dec  5 08:12 3-twofiles
+-rwxr-xr-x 1 root root 29 Dec  5 08:17 4-lastlines
+-rwxr-xr-x 1 root root 12 Nov 29 21:05 ba
+-rwxr-xr-x 1 root root 18 Nov 29 21:05 c
+-rwxr-xr-x 1 root root 23 Dec  5 08:04 ex
+-rwxr-xr-x 1 root root 55 Dec  5 08:13 g
+-rw-r--r-- 1 root root  0 Dec  5 08:18 junk
+-rwxr-xr-x 1 root root 47 Dec  5 07:46 README.md
