@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.js" -print -exec rm {} \;
+find . -not  -type d -name "*.js" -print -exec rm {} \;
