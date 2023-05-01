@@ -9,14 +9,14 @@ for num in {1..100}
 do
   if (( num % 3 == 0 && num % 5 == 0 ))
   then
-    echo "FizzBuzz"
+    echo -n "FizzBuzz"
   elif (( num % 3 == 0 ))
   then
-    echo "Fizz"
+    echo -n "Fizz"
   elif (( num % 5 == 0 ))
   then
-    echo "Buzz"
+    echo -n "Buzz"
   else
-    echo "$num"
+    echo -n "$num"
   fi
 done
