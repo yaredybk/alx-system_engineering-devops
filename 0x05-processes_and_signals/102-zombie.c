@@ -11,14 +11,20 @@
  */
 int infinite_while(void)
 {
-    while (1)
-    {
-        sleep(1);
-    }
-    return (0);
+	while (1)
+	{
+		sleep(1);
+	}
+	return (0);
 }
 
-int main()
+/**
+ * main - creates 5 zombie processes.
+ * For every zombie process created, it displays Zombie process created, PID:
+ *
+ * Return: void
+ */
+int main(void)
 {
 	pid_t pid;
 	int i;
@@ -35,5 +41,5 @@ int main()
 			exit(0);
 	}
 
-	return infinite_while();
+	return (infinite_while());
 }
