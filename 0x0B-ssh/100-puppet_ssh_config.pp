@@ -4,6 +4,10 @@
 
 file { 'Turn off passwd auth':
   ensure  => present,
-  content => 'PasswordAuthentication n\nIdentityFile ~/.ssh/school',
+  content <<-'EOF'
+Host *
+        passwordAuthentification no
+        IdentifyFile ~/.ssh/school
+EOF
   path    => '/etc/ssh/ssh_config',
 }
