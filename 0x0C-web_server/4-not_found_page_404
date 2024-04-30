@@ -4,8 +4,9 @@
 apt-get -y update
 apt-get -y install nginx
 
-touch /var/www/html/index.html
+touch /var/www/html/index.html  /var/www/html/404.html
 echo "Hello world!" > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
 
 
 printf %s "server {
