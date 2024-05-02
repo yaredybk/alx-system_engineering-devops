@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#fix nginx connection refused error
+
+sudo apt-get update
+sudo apt install nginx
+
+service restart nginx
