@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#Create a certificate using certbot and
+#configure HAproxy to accept encrypted traffic for your subdomain www.
+
+global
+	log /dev/log local10
+
+defaults
+	log gloabl
+
+frontend www-http
+#	bind	0.0.0.0:80
+	mode http
+	reqadd X-Forwarded-Proto:\ http
+	default_backend www-backend
+
+frontend www-https
+	mode http
