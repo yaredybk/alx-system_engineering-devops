@@ -11,10 +11,10 @@ my_domain_innfo () {
 
 if [ "$#" == 1 ]
 then
-  my_domain_innfo "$1" "www"
-  my_domain_innfo "$1" "lb-01"
-  my_domain_innfo "$1" "web-01"
-  my_domain_innfo "$1" "web-02"
+  my_domain_innfo "www" "54.210.101.56"
+  my_domain_innfo "lb-01" "54.210.101.56"
+  my_domain_innfo "web-01" "34.204.101.138"
+  my_domain_innfo "web-02" "107.21.40.69"
 elif [ "$#" == 2 ]
 then
   my_domain_innfo "$1" "$2"
