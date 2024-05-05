@@ -22,6 +22,6 @@ printf %s "server {
 }
 " > /etc/nginx/sites-available/default
 
-sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default &> /dev/null
 
 service nginx start
