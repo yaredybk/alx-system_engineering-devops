@@ -3,5 +3,5 @@
 
 sudo apt-get update
 sudo apt install nginx
-service restart nginx
+service nginx start
 
