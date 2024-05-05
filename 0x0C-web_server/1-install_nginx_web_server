@@ -7,8 +7,10 @@ sudo apt-get -y install nginx
 sudo touch /var/www/html/index.html
 sudo chown -R "$USER":"$USER" /var/www/html/index.html
 sudo chmod -R 755 /var/www/html
-sudo echo "Hello world!" | sudo tee /var/www/html/index.html
 
+sudo cat > /var/www/html/index.html << EOF
+Hello World!
+EOF
 
 printf %s "server {
 	listen 80 default_server;
@@ -20,5 +22,6 @@ printf %s "server {
 }
 " > /etc/nginx/sites-available/default
 
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
 service nginx start
