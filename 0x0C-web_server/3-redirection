@@ -1,39 +1,31 @@
 #!/usr/bin/env bash
 #install NGINX
 
+apt-get -y update
+apt-get -y install nginx
 
-sudo apt-get -y update
-sudo apt-get -y install nginx
+touch /var/www/html/index.html
+echo "Hello world!" > /var/www/html/index.html
 
-sudo touch /var/www/html/index.html
-sudo chown -R "$USER":"$USER" /var/www/html/index.html
-sudo chmod -R 755 /var/www/html
-
-sudo cat > /var/www/html/index.html << EOF
-Hello World!
-EOF
 
 printf %s "server {
-listen 80 default_server;
-listen[::]:80 default_server;
+        listen 80 default_server;
+        listen          [::]:80 default_server;
 
-root/var/www/html;
-indexindex.html index.htm index.nginx-debian.html;
-server_name _;
+        root            /var/www/html;
+        index           index.html index.htm index.nginx-debian.html;
+        server_name _;
 
-location / {
-try_files $uri $uri/ =404;
-}
+        location / {
+                try_files \$uri \$uri/ =404;
+        }
 
-location /redirect_me {
+        location /redirect_me {
         return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
-}
+        }
 }
 " > /etc/nginx/sites-available/default
 
-if [ "$(pgrep nginx)" -le 0 ];
-then
-    service nginx start
-else
-    service nginx restart
-fi;
+
+service nginx restart
+
