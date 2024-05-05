@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#connect to my web servers
+
+if [ "$1" -eq 2 ]; then
+	ssh ubuntu@107.21.40.69
+else
+	ssh ubuntu@34.204.101.138
+fi
