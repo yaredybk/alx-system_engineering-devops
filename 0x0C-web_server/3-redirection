@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 #install NGINX
 
-apt-get -y update
-apt-get -y install nginx
 
-touch /var/www/html/index.html
-echo "Hello world!" > /var/www/html/index.html
+sudo apt-get -y update
+sudo apt-get -y install nginx
 
+sudo touch /var/www/html/index.html
+sudo chown -R "$USER":"$USER" /var/www/html/index.html
+sudo chmod -R 755 /var/www/html
+
+sudo cat > /var/www/html/index.html << EOF
+Hello World!
+EOF
 
 printf %s "server {
 listen 80 default_server;
