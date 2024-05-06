@@ -17,14 +17,14 @@ tmp="
 #front-end setup
 frontend web1
         bind *:80
-        mode http
+        mode tcp
 	default_backend server1
 
 #back-end setup
 backend server1
         balance roundrobin
-        mode http
-        server 104828-web-01 34.204.101.138:80 check
+        mode tcp
+	server 104828-web-01 34.204.101.138:80 check
         server 104828-web-02 107.21.40.69:80 check
 "
 printf "%s" "$tmp" | sudo tee -a  /etc/haproxy/haproxy.cfg &> /dev/null
