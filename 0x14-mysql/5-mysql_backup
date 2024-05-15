@@ -11,4 +11,4 @@
 # the password used to connect to the MySQL database
 
 mysqldump --all-databases -uroot -p"$1" -rbackup.sql
-tar -czf "$(date +%d-%m-%y).tar.gz"
+tar -czf "$(date +%d-%m-%y).tar.gz" ./backup.sql
