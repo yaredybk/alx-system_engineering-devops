@@ -54,7 +54,7 @@ if __name__ == "__main__":
                         })
                 else:
                     a[id] = [{
-                        "username": u.get(id, {}),
+                        "username": u.get(id, {}).get("username"),
                         "task": d.get("title"),
                         "completed": d.get("completed")
                     }]
