@@ -38,7 +38,7 @@ if __name__ == "__main__":
     if data and info:
         with open(f"{argv[1]}.json", 'w', newline='') as f:
             a = {
-                    info.get("userId"): [{
+                    info.get("id"): [{
                         "task": d.get("title"),
                         "completed": str(d.get("completed")),
                         "username": info.get("username")
