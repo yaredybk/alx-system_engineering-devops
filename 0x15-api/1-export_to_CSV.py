@@ -38,5 +38,5 @@ if __name__ == "__main__":
     if data and info:
         with open(f"{argv[1]}.csv", 'w', newline='') as f:
             [f.write(f'"{info.get("id")}","{info.get("username")}",' +
-                     f'"{str(info.get("completed"))}","{d.get("title")}"\n')
+                     f'"{str(d.get("completed"))}","{d.get("title")}"\n')
                 for d in data]
