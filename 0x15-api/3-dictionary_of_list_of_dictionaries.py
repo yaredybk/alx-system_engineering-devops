@@ -38,7 +38,7 @@ if __name__ == "__main__":
         with open(f"todo_all_employees.json", 'w', newline='') as f:
             u = {
                     d.get("id"): {
-                        "username": d.get("name")
+                        "username": d.get("username")
                         }
                     for d in info
                     }
