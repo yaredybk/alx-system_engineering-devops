@@ -39,6 +39,6 @@ if __name__ == "__main__":
         for task in data:
             total_tasks += 1
             completed_tasks += 1 if (task["completed"]) else 0
-        print(f"Employee {info['name']}  is done with tasks" +
+        print(f"Employee {info['name']} is done with tasks" +
               f"({completed_tasks}/{total_tasks}):")
         [print(f"\t {t['title']}") for t in data if t["completed"]]
