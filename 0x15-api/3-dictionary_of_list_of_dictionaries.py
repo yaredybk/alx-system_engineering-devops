@@ -50,12 +50,12 @@ if __name__ == "__main__":
                     a[id].append({
                         "username": u.get(id, {}),
                         "task": d.get("title"),
-                        "completed": str(d.get("completed"))
+                        "completed": d.get("completed")
                         })
                 else:
                     a[id] = [{
                         "username": u.get(id, {}),
                         "task": d.get("title"),
-                        "completed": str(d.get("completed"))
+                        "completed": d.get("completed")
                     }]
             json.dump(a, f)
