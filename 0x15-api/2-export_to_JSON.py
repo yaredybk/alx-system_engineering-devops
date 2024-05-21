@@ -44,5 +44,4 @@ if __name__ == "__main__":
                         "username": info.get("username")
                     } for d in data]
                     }
-            print(a)
             json.dump(a, f)
