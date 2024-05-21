@@ -40,7 +40,7 @@ if __name__ == "__main__":
             a = {
                     info.get("id"): [{
                         "task": d.get("title"),
-                        "completed": str(d.get("completed")),
+                        "completed": d.get("completed"),
                         "username": info.get("username")
                     } for d in data]
                     }
