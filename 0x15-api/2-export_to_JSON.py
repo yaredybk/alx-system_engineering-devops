@@ -31,12 +31,18 @@ if __name__ == "__main__":
     """
      0. Gather data from an API
      using this REST API, for a given employee ID,
-     export data in the CSV format.
+     export data in the JSON format.
      """
 
     data, info = getData(argv[1])
     if data and info:
-        with open(f"{argv[1]}.csv", 'w', newline='') as f:
-            [f.write(f'"{info.get("userId")}","{info.get("username")}",' +
-                     f'"{str(info.get("completed"))}","{d.get("title")}"\n')
-                for d in data]
+        with open(f"{argv[1]}.json", 'w', newline='') as f:
+            a = {
+                    info.get("userId"): [{
+                        "task": d.get("title"),
+                        "completed": str(d.get("completed")),
+                        "username": info.get("username")
+                    } for d in data]
+                    }
+            print(a)
+            json.dump(a, f)
