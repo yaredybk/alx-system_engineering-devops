@@ -21,8 +21,6 @@ def getData(id):
     if user_data.status_code == 200 and user_info.status_code == 200:
         data = user_data.json()
         info = user_info.json()
-        print(info)
-        print(data[0])
         return (data, info)
     return (None, None)
 
