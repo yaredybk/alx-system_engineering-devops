@@ -22,7 +22,7 @@ def recurse(subreddit, hot_list=[], count=0, after=None):
     if response.status_code >= 300:
         return None
 
-    results = response.json().get("data")
+    results = response.json().get("data", {})
     after = results.get("after")
     count += results.get("dist")
     for c in results.get("children"):
