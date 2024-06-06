@@ -8,9 +8,9 @@ def recurse(subreddit, hot_list=[], count=0, after=None):
     returns a list containing the titles of
     all hot articles for a given subreddit. If no results are found for
     the given subreddit, the function should return None."""
-    url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
+    url = f"https://www.reddit.com/r/{subreddit}/hot/.json"
     headers = {
-        "User-Agent": "underscoDe@alx-holbertonschool"
+        "User-Agent": "yared@alx-holbertonschool"
     }
     params = {
         "after": after,
