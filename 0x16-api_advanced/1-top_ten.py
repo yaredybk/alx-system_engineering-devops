@@ -5,7 +5,7 @@ subreddit
 import requests
 
 
-def number_of_subscribers(subreddit):
+def top_ten(subreddit):
     """ queries the Reddit API and prints the titles of
     the first 10 hot posts listed for a given subreddit.
     """
@@ -18,6 +18,7 @@ def number_of_subscribers(subreddit):
             }
     res = requests.get(url, headers=headers, params=params,
                        allow_redirects=False)
+    print(f"RES\n{res}")
     if res.status_code >= 300:
         print(None)
         return
