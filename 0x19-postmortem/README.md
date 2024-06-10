@@ -1,6 +1,6 @@
 ## Postmortem: Database Update Bug and Data Recovery (May 9, 2024)
+![unsafe update desaster]("usafe_update_disaster_3.jpg")
 ## Issue Summary
-
 Duration: May 9, 2024 (5 days after code deployment) - May 11, 2024 (2 days)
 Impact: All proforma updates after May 4, 2024, were overwritten due to an unsafe update query. Users were unable to access or edit proforma data beyond May 4th. Downtime for updates and editing lasted two days (May 9th - 10th). Paperwork was used as a temporary workaround.
 Root Cause: The deployed update code lacked a WHERE clause, causing all proforma records to be updated with the latest data.
