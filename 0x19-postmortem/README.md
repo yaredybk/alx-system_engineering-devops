@@ -6,12 +6,12 @@
   - Root Cause: The deployed update code lacked a WHERE clause, causing all proforma records to be updated with the latest data.
 ## Timeline
 
-  . May 4, 2024: Faulty code for updating proforma records was deployed to production.
-  . May 9, 2024: A user reported an inability to access historical proforma data.
-  . May 9, 2024 (AM): Investigation began. The update code was reviewed, and the missing WHERE clause was identified as the culprit.
-  . May 9, 2024 (PM): A fix was developed and implemented, introducing a parameterized query with a WHERE clause to update specific proforma records.
-  . May 9, 2024 - May 10, 2024: Data recovery efforts commenced. Manual SQL queries were used to restore overwritten proforma data from daily database dumps.
-  . May 11, 2024: Data recovery was mostly complete. System functionality was restored, allowing access and updates to all proforma records.
+  - May 4, 2024: Faulty code for updating proforma records was deployed to production.
+  - May 9, 2024: A user reported an inability to access historical proforma data.
+  - May 9, 2024 (AM): Investigation began. The update code was reviewed, and the missing WHERE clause was identified as the culprit.
+  - May 9, 2024 (PM): A fix was developed and implemented, introducing a parameterized query with a WHERE clause to update specific proforma records.
+  - May 9, 2024 - May 10, 2024: Data recovery efforts commenced. Manual SQL queries were used to restore overwritten proforma data from daily database dumps.
+  - May 11, 2024: Data recovery was mostly complete. System functionality was restored, allowing access and updates to all proforma records.
 ## Root Cause and Resolution
 
   The root cause of the issue was an unsafe update query in the deployed code. The code lacked a WHERE clause to filter updates to specific proforma records. This resulted in all proforma entries being overwritten with the latest data point.
